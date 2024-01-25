@@ -29,8 +29,9 @@ mimalloc_lib = static_library(
     'mimalloc',
     tgts,
     pic: true,
-    c_args: [
+    cpp_args: [
         '-DMI_STATIC_LIB',
+        '-DMI_MALLOC_OVERRIDE',
         '-ftls-model=initial-exec',
         '-fno-builtin-malloc',
     ],
